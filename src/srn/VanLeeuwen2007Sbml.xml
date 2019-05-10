@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
+  <annotation>
+    <SimBiology xmlns="http://www.mathworks.com">
+      <Version Major="5" Minor="5" Point="0"/>
+    </SimBiology>
+  </annotation>
+  <model id="mweda59eac_0680_4d5b_a73c_41036dc4d139" name="VanLeeuwen">
+    <listOfUnitDefinitions>
+      <unitDefinition id="MWDERIVEDUNIT_meter___3" name="meter^3">
+        <listOfUnits>
+          <unit kind="metre" exponent="3"/>
+          <unit kind="dimensionless" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="MWBUILTINPREFIX_nano_MWBUILTINUNIT_mole" name="nanomole">
+        <listOfUnits>
+          <unit kind="mole" exponent="1" multiplier="1e-09"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="MWDERIVEDUNIT_nanomole__meter___3" name="nanomole/meter^3">
+        <listOfUnits>
+          <unit kind="metre" exponent="-3"/>
+          <unit kind="mole" exponent="1"/>
+          <unit kind="dimensionless" multiplier="1e-09"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="MWDERIVEDUNIT_1__hour" name="1/hour">
+        <listOfUnits>
+          <unit kind="second" exponent="-1"/>
+          <unit kind="dimensionless" multiplier="0.000277777777777778"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="MWDERIVEDUNIT_nanomole__meter___3_hour" name="nanomole/(meter^3*hour)">
+        <listOfUnits>
+          <unit kind="metre" exponent="-3"/>
+          <unit kind="mole" exponent="1"/>
+          <unit kind="second" exponent="-1"/>
+          <unit kind="dimensionless" multiplier="2.77777777777778e-13"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="MWDERIVEDUNIT_1__nanomole__meter___3_hour" name="1/(nanomole/meter^3*hour)">
+        <listOfUnits>
+          <unit kind="metre" exponent="3"/>
+          <unit kind="mole" exponent="-1"/>
+          <unit kind="second" exponent="-1"/>
+          <unit kind="dimensionless" multiplier="277777.777777778"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="cytosolmembraneandnucleus" name="cytosolmembraneandnucleus" size="1" units="MWDERIVEDUNIT_meter___3" constant="true">
+        <annotation>
+          <SimBiology xmlns="http://www.mathworks.com">
+            <Unit/>
+          </SimBiology>
+        </annotation>
+      </compartment>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="X" name="X" compartment="cytosolmembraneandnucleus" initialConcentration="0.067" substanceUnits="MWBUILTINPREFIX_nano_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <SimBiology xmlns="http://www.mathworks.com">
+            <Unit Numerator="nanomole" Denominator="meter^3"/>
+          </SimBiology>
+        </annotation>
+      </species>
+      <species id="D" name="D" compartment="cytosolmembraneandnucleus" initialConcentration="0.67" substanceUnits="MWBUILTINPREFIX_nano_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <SimBiology xmlns="http://www.mathworks.com">
+            <Unit Numerator="nanomole" Denominator="meter^3"/>
+          </SimBiology>
+        </annotation>
+      </species>
+      <species id="C_o" name="C_o" compartment="cytosolmembraneandnucleus" initialConcentration="2.54" substanceUnits="MWBUILTINPREFIX_nano_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <SimBiology xmlns="http://www.mathworks.com">
+            <Unit Numerator="nanomole" Denominator="meter^3"/>
+          </SimBiology>
+        </annotation>
+      </species>
+      <species id="C_u" name="C_u" compartment="cytosolmembraneandnucleus" initialConcentration="0.45" substanceUnits="MWBUILTINPREFIX_nano_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <SimBiology xmlns="http://www.mathworks.com">
+            <Unit Numerator="nanomole" Denominator="meter^3"/>
+          </SimBiology>
+        </annotation>
+      </species>
+      <species id="C_c" name="C_c" compartment="cytosolmembraneandnucleus" initialConcentration="0" substanceUnits="MWBUILTINPREFIX_nano_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <SimBiology xmlns="http://www.mathworks.com">
+            <Unit Numerator="nanomole" Denominator="meter^3"/>
+          </SimBiology>
+        </annotation>
+      </species>
+      <species id="A" name="A" compartment="cytosolmembraneandnucleus" initialConcentration="10" substanceUnits="MWBUILTINPREFIX_nano_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <SimBiology xmlns="http://www.mathworks.com">
+            <Unit Numerator="nanomole" Denominator="meter^3"/>
+          </SimBiology>
+        </annotation>
+      </species>
+      <species id="C_A" name="C_A" compartment="cytosolmembraneandnucleus" initialConcentration="18.14" substanceUnits="MWBUILTINPREFIX_nano_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <SimBiology xmlns="http://www.mathworks.com">
+            <Unit Numerator="nanomole" Denominator="meter^3"/>
+          </SimBiology>
+        </annotation>
+      </species>
+      <species id="T" name="T" compartment="cytosolmembraneandnucleus" initialConcentration="25" substanceUnits="MWBUILTINPREFIX_nano_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <SimBiology xmlns="http://www.mathworks.com">
+            <Unit Numerator="nanomole" Denominator="meter^3"/>
+          </SimBiology>
+        </annotation>
+      </species>
+      <species id="C_oT" name="C_oT" compartment="cytosolmembraneandnucleus" initialConcentration="2.54" substanceUnits="MWBUILTINPREFIX_nano_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <SimBiology xmlns="http://www.mathworks.com">
+            <Unit Numerator="nanomole" Denominator="meter^3"/>
+          </SimBiology>
+        </annotation>
+      </species>
+      <species id="C_cT" name="C_cT" compartment="cytosolmembraneandnucleus" initialConcentration="0" substanceUnits="MWBUILTINPREFIX_nano_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <SimBiology xmlns="http://www.mathworks.com">
+            <Unit Numerator="nanomole" Denominator="meter^3"/>
+          </SimBiology>
+        </annotation>
+      </species>
+      <species id="Y" name="Y" compartment="cytosolmembraneandnucleus" initialConcentration="0.48" substanceUnits="MWBUILTINPREFIX_nano_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <SimBiology xmlns="http://www.mathworks.com">
+            <Unit Numerator="nanomole" Denominator="meter^3"/>
+          </SimBiology>
+        </annotation>
+      </species>
+      <species id="C_F" name="C_F" compartment="cytosolmembraneandnucleus" initialConcentration="2.54" substanceUnits="MWBUILTINPREFIX_nano_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <SimBiology xmlns="http://www.mathworks.com">
+            <Unit Numerator="nanomole" Denominator="meter^3"/>
+          </SimBiology>
+        </annotation>
+      </species>
+      <species id="C_T" name="C_T" compartment="cytosolmembraneandnucleus" initialConcentration="2.54" substanceUnits="MWBUILTINPREFIX_nano_MWBUILTINUNIT_mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <SimBiology xmlns="http://www.mathworks.com">
+            <Unit Numerator="nanomole" Denominator="meter^3"/>
+          </SimBiology>
+        </annotation>
+      </species>
+      <species id="drag" name="drag" compartment="cytosolmembraneandnucleus" initialAmount="1" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter id="K_T" name="K_T" value="50" units="MWDERIVEDUNIT_nanomole__meter___3" constant="true"/>
+      <parameter id="K_C" name="K_C" value="200" units="MWDERIVEDUNIT_nanomole__meter___3" constant="true"/>
+      <parameter id="K_D" name="K_D" value="5" units="MWDERIVEDUNIT_nanomole__meter___3" constant="true"/>
+      <parameter id="p_u" name="p_u" value="100" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="wnt_level" name="wnt_level" value="0" constant="true"/>
+      <parameter id="gamma1" name="gamma1" value="1" constant="true"/>
+      <parameter id="gamma2" name="gamma2" value="1" constant="true"/>
+      <parameter id="xi_D" name="xi_D" value="5" constant="true"/>
+      <parameter id="xi_Dx" name="xi_Dx" value="5" constant="true"/>
+      <parameter id="xi_X" name="xi_X" value="200" constant="true"/>
+      <parameter id="xi_C" name="xi_C" value="0" constant="true"/>
+      <parameter id="s_D" name="s_D" value="100" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="d_Dx" name="d_Dx" value="5" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="s_X" name="s_X" value="10" units="MWDERIVEDUNIT_nanomole__meter___3_hour" constant="true"/>
+      <parameter id="d_X" name="d_X" value="100" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="d_u" name="d_u" value="50" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="s_c" name="s_c" value="25" units="MWDERIVEDUNIT_nanomole__meter___3_hour" constant="true"/>
+      <parameter id="d_c" name="d_c" value="1" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="s_CA" name="s_CA" value="250" units="MWDERIVEDUNIT_1__nanomole__meter___3_hour" constant="true"/>
+      <parameter id="d_CA" name="d_CA" value="350" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="s_CT" name="s_CT" value="30" units="MWDERIVEDUNIT_1__nanomole__meter___3_hour" constant="true"/>
+      <parameter id="d_CT" name="d_CT" value="750" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="p_c" name="p_c" value="0" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="s_A" name="s_A" value="20" units="MWDERIVEDUNIT_nanomole__meter___3_hour" constant="true"/>
+      <parameter id="d_A" name="d_A" value="2" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="s_T" name="s_T" value="10" units="MWDERIVEDUNIT_nanomole__meter___3_hour" constant="true"/>
+      <parameter id="d_T" name="d_T" value="0.4" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="s_Y" name="s_Y" value="10" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="d_Y" name="d_Y" value="1" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="d_D" name="d_D" value="5" units="MWDERIVEDUNIT_1__hour" constant="true"/>
+      <parameter id="ComplexTransitThreshold" name="ComplexTransitThreshold" value="1" constant="true"/>
+    </listOfParameters>
+    <listOfRules>
+      <assignmentRule variable="C_F">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci> C_o </ci>
+            <ci> C_c </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="C_T">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci> C_oT </ci>
+            <ci> C_cT </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="drag">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <ci> max </ci>
+            <apply>
+              <divide/>
+              <apply>
+                <minus/>
+                <ci> C_A </ci>
+                <cn type="integer"> 100 </cn>
+              </apply>
+              <cn type="integer"> 3 </cn>
+            </apply>
+            <cn type="integer"> 1 </cn>
+          </apply>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction id="mwd6b35759_f098_484c_9c65_e84e7e4b61e4" name="r1" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="X" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="D" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s_D </ci>
+              <ci> gamma1 </ci>
+              <ci> X </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mweddac6d0_231e_4c92_ba2a_c91edc682ff5" name="r2" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="D" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="X" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <apply>
+                <plus/>
+                <ci> d_Dx </ci>
+                <apply>
+                  <times/>
+                  <ci> wnt_level </ci>
+                  <ci> xi_Dx </ci>
+                </apply>
+              </apply>
+              <ci> D </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwdf62dfed_ec88_4d81_bc9d_da0e10f41e4b" name="r22" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference species="X" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s_X </ci>
+              <ci> cytosolmembraneandnucleus </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwee9cc998_28e9_4173_a694_f3e278a639b7" name="r23" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="X" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <apply>
+                <plus/>
+                <ci> d_X </ci>
+                <apply>
+                  <times/>
+                  <ci> wnt_level </ci>
+                  <ci> xi_X </ci>
+                </apply>
+              </apply>
+              <ci> X </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw661e341d_97d1_4e6f_8812_3be7ffc86d42" name="r7" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="C_o" stoichiometry="1"/>
+          <speciesReference species="D" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="C_u" stoichiometry="1"/>
+          <speciesReference species="D" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> p_u </ci>
+                <ci> gamma2 </ci>
+                <ci> C_o </ci>
+                <ci> D </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> C_o </ci>
+                <ci> C_c </ci>
+                <ci> K_D </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw179aa33c_9a7e_43c0_9285_3d8f97719c60" name="r16" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="C_c" stoichiometry="1"/>
+          <speciesReference species="D" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="C_u" stoichiometry="1"/>
+          <speciesReference species="D" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> p_u </ci>
+                <ci> gamma2 </ci>
+                <ci> C_c </ci>
+                <ci> D </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> C_c </ci>
+                <ci> C_o </ci>
+                <ci> K_D </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwff8d34f9_e036_49f1_b3b8_3706ecb98660" name="r8" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="C_u" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> d_u </ci>
+              <ci> C_u </ci>
+              <ci> cytosolmembraneandnucleus </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwd4fa317a_a484_4f38_b9b0_6ed404d9adcb" name="r3" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference species="C_o" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s_c </ci>
+              <ci> cytosolmembraneandnucleus </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwcb88a249_a200_4e95_9185_5654bf1ebfc0" name="r4" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="C_o" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> d_c </ci>
+              <ci> C_o </ci>
+              <ci> cytosolmembraneandnucleus </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw0aeac2fc_dd2f_4fe7_b60c_97f0b008ed89" name="r17" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="C_c" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> d_c </ci>
+              <ci> C_c </ci>
+              <ci> cytosolmembraneandnucleus </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw4b47c66d_37e6_4c33_b043_1f6b3b814449" name="r9" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="C_o" stoichiometry="1"/>
+          <speciesReference species="A" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="C_A" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s_CA </ci>
+              <ci> C_o </ci>
+              <ci> A </ci>
+              <ci> cytosolmembraneandnucleus </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw69974db4_8ead_416c_a220_f6dc3be1f3b6" name="r10" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="C_A" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="C_o" stoichiometry="1"/>
+          <speciesReference species="A" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> d_CA </ci>
+              <ci> C_A </ci>
+              <ci> cytosolmembraneandnucleus </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwccb628c3_76c8_47be_9d6b_6d3f1ae30dcc" name="r11" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="C_o" stoichiometry="1"/>
+          <speciesReference species="T" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="C_oT" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s_CT </ci>
+              <ci> C_o </ci>
+              <ci> T </ci>
+              <ci> cytosolmembraneandnucleus </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw581d69f1_60b3_4d21_9323_31b05ee89570" name="r18" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="C_c" stoichiometry="1"/>
+          <speciesReference species="T" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="C_cT" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s_CT </ci>
+              <ci> C_c </ci>
+              <ci> T </ci>
+              <ci> cytosolmembraneandnucleus </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwb17c2c57_279d_4e88_b9cf_896029135cc1" name="r12" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="C_oT" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="C_o" stoichiometry="1"/>
+          <speciesReference species="T" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> d_CT </ci>
+              <ci> C_oT </ci>
+              <ci> cytosolmembraneandnucleus </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwe3236fc5_2118_40cb_8db3_ef9da29137cf" name="r19" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="C_cT" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="C_c" stoichiometry="1"/>
+          <speciesReference species="T" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> d_CT </ci>
+              <ci> C_cT </ci>
+              <ci> cytosolmembraneandnucleus </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw0be4a28b_e9c6_43da_8f95_d9c564a7caae" name="r15" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="C_o" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="C_c" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <apply>
+                  <plus/>
+                  <ci> p_c </ci>
+                  <apply>
+                    <times/>
+                    <ci> wnt_level </ci>
+                    <ci> xi_C </ci>
+                  </apply>
+                </apply>
+                <ci> C_o </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> C_o </ci>
+                <ci> K_C </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwc360befb_07da_4d19_bbec_523fbef47dc9" name="r5" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference species="A" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s_A </ci>
+              <ci> cytosolmembraneandnucleus </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw985b39ad_50ff_4d55_95f7_42e7f1bf6a3d" name="r6" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="A" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> d_A </ci>
+              <ci> A </ci>
+              <ci> cytosolmembraneandnucleus </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwf27b65bb_38d6_44cf_aa66_9b38ae5885eb" name="r20" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference species="T" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s_T </ci>
+              <ci> cytosolmembraneandnucleus </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwd7a7bdbb_8f2e_42ed_bf97_48e33e45dafb" name="r21" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="T" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> d_T </ci>
+              <ci> T </ci>
+              <ci> cytosolmembraneandnucleus </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw988a8caf_bd68_462b_86d7_51844c1dcfd3" name="r13" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="C_oT" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Y" stoichiometry="1"/>
+          <speciesReference species="C_oT" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> s_Y </ci>
+                <apply>
+                  <plus/>
+                  <ci> C_oT </ci>
+                  <ci> C_cT </ci>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> C_oT </ci>
+                <ci> C_cT </ci>
+                <ci> K_T </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw9ab26a4c_bd70_45e0_bacc_f830ab28abca" name="r14" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="Y" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> d_Y </ci>
+              <ci> Y </ci>
+              <ci> cytosolmembraneandnucleus </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw931baf8f_6572_46f6_96eb_cae40ee267b7" name="r24" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="D" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <apply>
+                <plus/>
+                <ci> d_D </ci>
+                <apply>
+                  <times/>
+                  <ci> wnt_level </ci>
+                  <ci> xi_D </ci>
+                </apply>
+              </apply>
+              <ci> D </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

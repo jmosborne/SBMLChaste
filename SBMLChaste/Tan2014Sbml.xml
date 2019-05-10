@@ -1,0 +1,674 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level2" xmlns:jd2="http://www.sys-bio.org/sbml/jd2" level="2" version="1">
+  <model name="Model2" id="M2">
+    <notes>
+      <p xmlns="http://www.w3.org/1999/xhtml">
+        <body/>
+            </p>
+      
+    </notes>
+    <annotation>
+<jd2:JDesignerLayout BuildVersion="52" MajorVersion="2" MinorVersion="3" version="2.0" xmlns:jd2="http://www.sys-bio.org/sbml/jd2">
+            <jd2:header>
+               <jd2:VersionHeader JDesignerVersion="2.0"/>
+               <jd2:ModelHeader Author="BruceGardiner,ChinWeeTan" ModelTitle="Model2" ModelVersion="1.0"/>
+               <jd2:TimeCourseDetails numberOfPoints="1000" timeEnd="10" timeStart="0"/>
+            </jd2:header>
+            <jd2:listOfParameterSets currentParameterSet="Optimised SS activeTransport">
+               <jd2:parameterSet Id="Optimised SS activeTransport">
+                  <jd2:notes note=""/>
+                  <jd2:listOfCompartments>
+                     <jd2:NameValue name="compartment" value="1"/>
+                     <jd2:NameValue name="CytosolMembrane" value="1.16"/>
+                     <jd2:NameValue name="nucleus" value="0.65"/>
+                  </jd2:listOfCompartments>
+                  <jd2:listOfSpecies>
+                     <jd2:NameValue name="bcat_cm" value="46.6"/>
+                     <jd2:NameValue name="ligand_cm" value="581.1"/>
+                     <jd2:NameValue name="complex_cm" value="418.9"/>
+                     <jd2:NameValue name="bcat_nu" value="32.6"/>
+                     <jd2:NameValue name="ligand_nu" value="516.8"/>
+                     <jd2:NameValue name="complex_nu" value="483.2"/>
+                     
+                  </jd2:listOfSpecies>
+                  <jd2:listOfParameters>
+                     <jd2:NameValue constant="false" name="wnt_level"/>
+                     <jd2:NameValue name="kC_k1" value="1E-5"/>
+                     <jd2:NameValue name="kC_k2" value="0.000647"/>
+                     <jd2:NameValue name="kN_k1" value="0.0001"/>
+                     <jd2:NameValue name="kN_k2" value="0.00349"/>
+                     <jd2:NameValue name="kdegradation" value="0.0163"/>
+                     <jd2:NameValue name="Bsyn" value="1.306"/>
+                     <jd2:NameValue name="kdiffusion_k" value="39.13"/>
+                     <jd2:NameValue name="K_n_active_k" value="17.16"/>
+                     <jd2:NameValue name="K_c_active_k" value="4.5"/>
+                  </jd2:listOfParameters>
+               </jd2:parameterSet>
+               <jd2:parameterSet Id="Optimised SS NOactiveTransport">
+                  <jd2:notes note=""/>
+                  <jd2:listOfCompartments>
+                     <jd2:NameValue name="compartment" value="1"/>
+                     <jd2:NameValue name="CytosolMembrane" value="1.16"/>
+                     <jd2:NameValue name="nucleus" value="0.65"/>
+                  </jd2:listOfCompartments>
+                  <jd2:listOfSpecies>
+                     <jd2:NameValue name="bcat_cm" value="70.8"/>
+                     <jd2:NameValue name="ligand_cm" value="605.3"/>
+                     <jd2:NameValue name="complex_cm" value="394.7"/>
+                     <jd2:NameValue name="bcat_nu" value="61.8"/>
+                     <jd2:NameValue name="ligand_nu" value="546"/>
+                     <jd2:NameValue name="complex_nu" value="454"/>
+                     
+                  </jd2:listOfSpecies>
+                  <jd2:listOfParameters>
+                     <jd2:NameValue constant="false" name="wnt_level"/>
+                     <jd2:NameValue name="kdegradation" value="0.0163"/>
+                     <jd2:NameValue name="Bsyn" value="1.306"/>
+                     <jd2:NameValue name="K_n_active_k" value="0"/>
+                     <jd2:NameValue name="kC_k1" value="1E-5"/>
+                     <jd2:NameValue name="kC_k2" value="0.00109"/>
+                     <jd2:NameValue name="kN_k1" value="0.0001"/>
+                     <jd2:NameValue name="kN_k2" value="0.00743"/>
+                     <jd2:NameValue name="kdiffusion_k" value="1354.1"/>
+                     <jd2:NameValue name="K_c_active_k" value="0"/>
+                  </jd2:listOfParameters>
+               </jd2:parameterSet>
+            </jd2:listOfParameterSets>
+            <jd2:JDGraphicsHeader BackGroundColor="FFFFFFEF"/>
+            <jd2:listOfCompartments>
+               <jd2:compartment id="compartment" size="1" visible="false">
+                  <jd2:boundingBox h="64" w="64" x="0" y="0"/>
+                  <jd2:membraneStyle color="FF00A5FF" thickness="12"/>
+                  <jd2:interiorStyle color="FFEEEEFF"/>
+                  <jd2:text value="compartment" visible="true">
+                     <jd2:position rx="32" ry="58"/>
+                     <jd2:font fontColor="FF000000" fontName="Arial" fontSize="8" fontStyle=""/>
+                  </jd2:text>
+               </jd2:compartment>
+               <jd2:compartment id="CytosolMembrane" size="1.16" visible="true">
+                  <jd2:boundingBox h="190" w="340" x="214" y="131"/>
+                  <jd2:membraneStyle color="FFFF0000" thickness="12"/>
+                  <jd2:interiorStyle color="FFEEEEFF"/>
+                  <jd2:text value="CytosolMembrane" visible="true">
+                     <jd2:position rx="118" ry="174"/>
+                     <jd2:font fontColor="FF000000" fontName="Arial" fontSize="8" fontStyle=""/>
+                  </jd2:text>
+               </jd2:compartment>
+               <jd2:compartment id="nucleus" size="0.65" visible="true">
+                  <jd2:boundingBox h="190" w="340" x="214" y="341"/>
+                  <jd2:membraneStyle color="FF00A5FF" thickness="12"/>
+                  <jd2:interiorStyle color="FFEEEEFF"/>
+                  <jd2:text value="nucleus" visible="true">
+                     <jd2:position rx="148" ry="174"/>
+                     <jd2:font fontColor="FF000000" fontName="Arial" fontSize="8" fontStyle=""/>
+                  </jd2:text>
+               </jd2:compartment>
+            </jd2:listOfCompartments>
+            <jd2:listOfSpecies>
+               <jd2:species boundaryCondition="false" compartment="CytosolMembrane" id="bcat_cm" initialConcentration="46.6">
+                  <jd2:positionLocked value="false"/>
+                  <jd2:boundingBox x="349" y="217"/>
+                  <jd2:displayValue visible="true">
+                     <jd2:position rx="0" ry="0"/>
+                     <jd2:font fontColor="FF000000" fontName="Arial" fontSize="8" fontStyle=""/>
+                  </jd2:displayValue>
+                  <jd2:text value="bcat_cm" visible="true">
+                     <jd2:position rx="4" ry="12"/>
+                     <jd2:font fontColor="FF000000" fontName="Arial" fontSize="8" fontStyle=""/>
+                  </jd2:text>
+                  <jd2:complex aliasBoundaryColor="FFFF0000" aliasBoundaryThickness="3" boundarySpeciesStyle="bsShadow" boundaryStyleColor="FF0000FF" captionPosition="npCenter" h="40" id="C2592840" w="62">
+                     <jd2:subunit shape="suOvalSquare">
+                        <jd2:boundingBox h="40" rx="0" ry="0" w="62"/>
+                        <jd2:text value="S13" visible="false">
+                           <jd2:position rx="20" ry="12"/>
+                           <jd2:font fontColor="FF000000" fontName="Arial" fontSize="8" fontStyle=""/>
+                        </jd2:text>
+                        <jd2:color endColor="FFFFFFFF" scheme="gtVertLinear" startColor="FFFFCC99"/>
+                        <jd2:edgeStyle color="FFFF9900" stroke="dsSolid" thickness="2"/>
+                     </jd2:subunit>
+                  </jd2:complex>
+               </jd2:species>
+               <jd2:species boundaryCondition="false" compartment="CytosolMembrane" id="ligand_cm" initialConcentration="581.1">
+                  <jd2:positionLocked value="false"/>
+                  <jd2:boundingBox x="460" y="152"/>
+                  <jd2:displayValue visible="true">
+                     <jd2:position rx="0" ry="0"/>
+                     <jd2:font fontColor="FF000000" fontName="Arial" fontSize="8" fontStyle=""/>
+                  </jd2:displayValue>
+                  <jd2:text value="ligand_cm" visible="true">
+                     <jd2:position rx="4" ry="12"/>
+                     <jd2:font fontColor="FF000000" fontName="Arial" fontSize="8" fontStyle=""/>
+                  </jd2:text>
+                  <jd2:complex aliasBoundaryColor="FFFF0000" aliasBoundaryThickness="3" boundarySpeciesStyle="bsShadow" boundaryStyleColor="FF0000FF" captionPosition="npCenter" h="40" id="C2592840" w="73">
+                     <jd2:subunit shape="suOvalSquare">
+                        <jd2:boundingBox h="40" rx="0" ry="0" w="73"/>
+                        <jd2:text value="S13" visible="false">
+                           <jd2:position rx="25" ry="12"/>
+                           <jd2:font fontColor="FF000000" fontName="Arial" fontSize="8" fontStyle=""/>
+                        </jd2:text>
+                        <jd2:color endColor="FFFFFFFF" scheme="gtVertLinear" startColor="FFFFCC99"/>
+                        <jd2:edgeStyle color="FFFF9900" stroke="dsSolid" thickness="2"/>
+                     </jd2:subunit>
+                  </jd2:complex>
+               </jd2:species>
+               <jd2:species boundaryCondition="false" compartment="CytosolMembrane" id="complex_cm" initialConcentration="418.9">
+                  <jd2:positionLocked value="false"/>
+                  <jd2:boundingBox x="447" y="251"/>
+                  <jd2:displayValue visible="true">
+                     <jd2:position rx="0" ry="0"/>
+                     <jd2:font fontColor="FF000000" fontName="Arial" fontSize="8" fontStyle=""/>
+                  </jd2:displayValue>
+                  <jd2:text value="complex_cm" visible="true">
+                     <jd2:position rx="5" ry="12"/>
+                     <jd2:font fontColor="FF000000" fontName="Arial" fontSize="8" fontStyle=""/>
+                  </jd2:text>
+                  <jd2:complex aliasBoundaryColor="FFFF0000" aliasBoundaryThickness="3" boundarySpeciesStyle="bsShadow" boundaryStyleColor="FF0000FF" captionPosition="npCenter" h="40" id="C2592840" w="88">
+                     <jd2:subunit shape="suOvalSquare">
+                        <jd2:boundingBox h="40" rx="0" ry="0" w="88"/>
+                        <jd2:text value="S13" visible="false">
+                           <jd2:position rx="33" ry="12"/>
+                           <jd2:font fontColor="FF000000" fontName="Arial" fontSize="8" fontStyle=""/>
+                        </jd2:text>
+                        <jd2:color endColor="FFFFFFFF" scheme="gtVertLinear" startColor="FFFFCC99"/>
+                        <jd2:edgeStyle color="FFFF9900" stroke="dsSolid" thickness="2"/>
+                     </jd2:subunit>
+                  </jd2:complex>
+               </jd2:species>
+               <jd2:species boundaryCondition="false" compartment="nucleus" id="bcat_nu" initialConcentration="32.6">
+                  <jd2:positionLocked value="false"/>
+                  <jd2:boundingBox x="275" y="428"/>
+                  <jd2:displayValue visible="true">
+                     <jd2:position rx="0" ry="0"/>
+                     <jd2:font fontColor="FF000000" fontName="Arial" fontSize="8" fontStyle=""/>
+                  </jd2:displayValue>
+                  <jd2:text value="bcat_nu" visible="true">
+                     <jd2:position rx="6" ry="12"/>
+                     <jd2:font fontColor="FF000000" fontName="Arial" fontSize="8" fontStyle=""/>
+                  </jd2:text>
+                  <jd2:complex aliasBoundaryColor="FFFF0000" aliasBoundaryThickness="3" boundarySpeciesStyle="bsShadow" boundaryStyleColor="FF0000FF" captionPosition="npCenter" h="40" id="C2592840" w="62">
+                     <jd2:subunit shape="suOvalSquare">
+                        <jd2:boundingBox h="40" rx="0" ry="0" w="62"/>
+                        <jd2:text value="S13" visible="false">
+                           <jd2:position rx="20" ry="12"/>
+                           <jd2:font fontColor="FF000000" fontName="Arial" fontSize="8" fontStyle=""/>
+                        </jd2:text>
+                        <jd2:color endColor="FFFFFFFF" scheme="gtVertLinear" startColor="FFFFCC99"/>
+                        <jd2:edgeStyle color="FFFF9900" stroke="dsSolid" thickness="2"/>
+                     </jd2:subunit>
+                  </jd2:complex>
+               </jd2:species>
+               <jd2:species boundaryCondition="false" compartment="nucleus" id="ligand_nu" initialConcentration="516.8">
+                  <jd2:positionLocked value="false"/>
+                  <jd2:boundingBox x="469" y="480"/>
+                  <jd2:displayValue visible="true">
+                     <jd2:position rx="0" ry="0"/>
+                     <jd2:font fontColor="FF000000" fontName="Arial" fontSize="8" fontStyle=""/>
+                  </jd2:displayValue>
+                  <jd2:text value="ligand_nu" visible="true">
+                     <jd2:position rx="0" ry="12"/>
+                     <jd2:font fontColor="FF000000" fontName="Arial" fontSize="8" fontStyle=""/>
+                  </jd2:text>
+                  <jd2:complex aliasBoundaryColor="FFFF0000" aliasBoundaryThickness="3" boundarySpeciesStyle="bsShadow" boundaryStyleColor="FF0000FF" captionPosition="npCenter" h="40" id="C2592840" w="62">
+                     <jd2:subunit shape="suOvalSquare">
+                        <jd2:boundingBox h="40" rx="0" ry="0" w="62"/>
+                        <jd2:text value="S13" visible="false">
+                           <jd2:position rx="20" ry="12"/>
+                           <jd2:font fontColor="FF000000" fontName="Arial" fontSize="8" fontStyle=""/>
+                        </jd2:text>
+                        <jd2:color endColor="FFFFFFFF" scheme="gtVertLinear" startColor="FFFFCC99"/>
+                        <jd2:edgeStyle color="FFFF9900" stroke="dsSolid" thickness="2"/>
+                     </jd2:subunit>
+                  </jd2:complex>
+               </jd2:species>
+               <jd2:species boundaryCondition="false" compartment="nucleus" id="complex_nu" initialConcentration="483.2">
+                  <jd2:positionLocked value="false"/>
+                  <jd2:boundingBox x="455" y="360"/>
+                  <jd2:displayValue visible="true">
+                     <jd2:position rx="0" ry="0"/>
+                     <jd2:font fontColor="FF000000" fontName="Arial" fontSize="8" fontStyle=""/>
+                  </jd2:displayValue>
+                  <jd2:text value="complex_nu" visible="true">
+                     <jd2:position rx="4" ry="12"/>
+                     <jd2:font fontColor="FF000000" fontName="Arial" fontSize="8" fontStyle=""/>
+                  </jd2:text>
+                  <jd2:complex aliasBoundaryColor="FFFF0000" aliasBoundaryThickness="3" boundarySpeciesStyle="bsShadow" boundaryStyleColor="FF0000FF" captionPosition="npCenter" h="40" id="C2592840" w="84">
+                     <jd2:subunit shape="suOvalSquare">
+                        <jd2:boundingBox h="40" rx="0" ry="0" w="84"/>
+                        <jd2:text value="S13" visible="false">
+                           <jd2:position rx="31" ry="12"/>
+                           <jd2:font fontColor="FF000000" fontName="Arial" fontSize="8" fontStyle=""/>
+                        </jd2:text>
+                        <jd2:color endColor="FFFFFFFF" scheme="gtVertLinear" startColor="FFFFCC99"/>
+                        <jd2:edgeStyle color="FFFF9900" stroke="dsSolid" thickness="2"/>
+                     </jd2:subunit>
+                  </jd2:complex>
+               </jd2:species>
+              
+            </jd2:listOfSpecies>
+            <jd2:listOfReactions>
+               <jd2:reaction id="Bsynthesis" reversible="false">
+                  <jd2:listOfReactants>
+                     
+                  </jd2:listOfReactants>
+                  <jd2:listOfProducts>
+                     <jd2:speciesReference species="bcat_cm" stoichiometry="1"/>
+                  </jd2:listOfProducts>
+                  <jd2:listOfModifierEdges/>
+                  <jd2:kineticLaw type="explicit">
+                                         
+                      <jd2:rateEquation value="Bsyn"/>
+                  </jd2:kineticLaw>
+                  <jd2:display arrowFillColor="FF000000" arrowStyle="ar1" lineColor="FF838464" lineThickness="2">
+                     <jd2:lineType type="ltBezier">
+                        <jd2:edge>
+                           
+                           <jd2:pt type="controlPoint" x="272" y="236"/>
+                           <jd2:pt type="controlPoint" x="310" y="245"/>
+                           <jd2:pt speciesRef="bcat_cm" type="product" x="380" y="237"/>
+                        </jd2:edge>
+                     </jd2:lineType>
+                     <jd2:displayValue showValue="false" value="0" visible="false">
+                        <jd2:position rx="0" ry="0"/>
+                        <jd2:font fontColor="FF000000" fontName="Arial" fontSize="8" fontStyle=""/>
+                     </jd2:displayValue>
+                  </jd2:display>
+               </jd2:reaction>
+               <jd2:reaction id="kDegradation" reversible="false">
+                  <jd2:listOfReactants>
+                     <jd2:speciesReference species="bcat_cm" stoichiometry="1"/>
+                  </jd2:listOfReactants>
+                  <jd2:listOfProducts>
+                     
+                  </jd2:listOfProducts>
+                  <jd2:listOfModifierEdges/>
+                  <jd2:kineticLaw type="explicit">
+                     <jd2:rateEquation value="kdegradation*bcat_cm"/>
+                  </jd2:kineticLaw>
+                  <jd2:display arrowFillColor="FF000000" arrowStyle="ar1" lineColor="FF838464" lineThickness="2">
+                     <jd2:lineType type="ltBezier">
+                        <jd2:edge>
+                           <jd2:pt speciesRef="bcat_cm" type="substrate" x="380" y="237"/>
+                           <jd2:pt type="controlPoint" x="336" y="187"/>
+                           <jd2:pt type="controlPoint" x="319" y="180"/>
+                           
+                        </jd2:edge>
+                     </jd2:lineType>
+                     <jd2:displayValue showValue="false" value="0" visible="false">
+                        <jd2:position rx="0" ry="0"/>
+                        <jd2:font fontColor="FF000000" fontName="Arial" fontSize="8" fontStyle=""/>
+                     </jd2:displayValue>
+                  </jd2:display>
+               </jd2:reaction>
+               <jd2:reaction id="kC" reversible="true">
+                  <jd2:listOfReactants>
+                     <jd2:speciesReference species="bcat_cm" stoichiometry="1"/>
+                     <jd2:speciesReference species="ligand_cm" stoichiometry="1"/>
+                  </jd2:listOfReactants>
+                  <jd2:listOfProducts>
+                     <jd2:speciesReference species="complex_cm" stoichiometry="1"/>
+                  </jd2:listOfProducts>
+                  <jd2:listOfModifierEdges/>
+                  <jd2:kineticLaw type="explicit">
+                     <jd2:rateEquation value="kC_k1*bcat_cm*ligand_cm-kC_k2*complex_cm"/>
+                  </jd2:kineticLaw>
+                  <jd2:display arrowFillColor="FF000000" arrowStyle="ar1" lineColor="FF838464" lineThickness="2">
+                     <jd2:edgeCenter x="443" y="212"/>
+                     <jd2:lineType type="ltLine">
+                        <jd2:edge type="substrate">
+                           <jd2:pt speciesRef="bcat_cm" type="substrate" x="380" y="237"/>
+                           <jd2:pt type="centerPoint" x="443" y="212"/>
+                        </jd2:edge>
+                        <jd2:edge type="substrate">
+                           <jd2:pt speciesRef="ligand_cm" type="substrate" x="496" y="172"/>
+                           <jd2:pt type="centerPoint" x="443" y="212"/>
+                        </jd2:edge>
+                        <jd2:edge type="product">
+                           <jd2:pt type="centerPoint" x="443" y="212"/>
+                           <jd2:pt speciesRef="complex_cm" type="product" x="491" y="271"/>
+                        </jd2:edge>
+                     </jd2:lineType>
+                     <jd2:displayValue showValue="false" value="0" visible="false">
+                        <jd2:position rx="0" ry="0"/>
+                        <jd2:font fontColor="FF000000" fontName="Arial" fontSize="8" fontStyle=""/>
+                     </jd2:displayValue>
+                  </jd2:display>
+               </jd2:reaction>
+               <jd2:reaction id="kN" reversible="true">
+                  <jd2:listOfReactants>
+                     <jd2:speciesReference species="bcat_nu" stoichiometry="1"/>
+                     <jd2:speciesReference species="ligand_nu" stoichiometry="1"/>
+                  </jd2:listOfReactants>
+                  <jd2:listOfProducts>
+                     <jd2:speciesReference species="complex_nu" stoichiometry="1"/>
+                  </jd2:listOfProducts>
+                  <jd2:listOfModifierEdges/>
+                  <jd2:kineticLaw type="explicit">
+                     <jd2:rateEquation value="kN_k1*bcat_nu*ligand_nu-kN_k2*complex_nu"/>
+                  </jd2:kineticLaw>
+                  <jd2:display arrowFillColor="FF000000" arrowStyle="ar1" lineColor="FF838464" lineThickness="2">
+                     <jd2:edgeCenter x="442" y="435"/>
+                     <jd2:lineType type="ltLine">
+                        <jd2:edge type="substrate">
+                           <jd2:pt speciesRef="bcat_nu" type="substrate" x="306" y="448"/>
+                           <jd2:pt type="centerPoint" x="442" y="435"/>
+                        </jd2:edge>
+                        <jd2:edge type="substrate">
+                           <jd2:pt speciesRef="ligand_nu" type="substrate" x="500" y="500"/>
+                           <jd2:pt type="centerPoint" x="442" y="435"/>
+                        </jd2:edge>
+                        <jd2:edge type="product">
+                           <jd2:pt type="centerPoint" x="442" y="435"/>
+                           <jd2:pt speciesRef="complex_nu" type="product" x="497" y="380"/>
+                        </jd2:edge>
+                     </jd2:lineType>
+                     <jd2:displayValue showValue="false" value="0" visible="false">
+                        <jd2:position rx="0" ry="0"/>
+                        <jd2:font fontColor="FF000000" fontName="Arial" fontSize="8" fontStyle=""/>
+                     </jd2:displayValue>
+                  </jd2:display>
+               </jd2:reaction>
+               <jd2:reaction id="kdiffusion" reversible="false">
+                  <jd2:listOfReactants>
+                     <jd2:speciesReference species="bcat_cm" stoichiometry="1"/>
+                  </jd2:listOfReactants>
+                  <jd2:listOfProducts>
+                     <jd2:speciesReference species="bcat_nu" stoichiometry="1"/>
+                  </jd2:listOfProducts>
+                  <jd2:listOfModifierEdges/>
+                  <jd2:kineticLaw type="explicit">
+                     <jd2:rateEquation value="kdiffusion_k*(bcat_cm-bcat_nu)"/>
+                  </jd2:kineticLaw>
+                  <jd2:display arrowFillColor="FF000000" arrowStyle="ar1" lineColor="FF838464" lineThickness="2">
+                     <jd2:lineType type="ltBezier">
+                        <jd2:edge>
+                           <jd2:pt speciesRef="bcat_cm" type="substrate" x="380" y="237"/>
+                           <jd2:pt type="controlPoint" x="244" y="266"/>
+                           <jd2:pt type="controlPoint" x="232" y="382"/>
+                           <jd2:pt speciesRef="bcat_nu" type="product" x="306" y="448"/>
+                        </jd2:edge>
+                     </jd2:lineType>
+                     <jd2:displayValue showValue="false" value="0" visible="false">
+                        <jd2:position rx="0" ry="0"/>
+                        <jd2:font fontColor="FF000000" fontName="Arial" fontSize="8" fontStyle=""/>
+                     </jd2:displayValue>
+                  </jd2:display>
+               </jd2:reaction>
+               <jd2:reaction id="K_c_active" reversible="false">
+                  <jd2:listOfReactants>
+                     <jd2:speciesReference species="bcat_cm" stoichiometry="1"/>
+                  </jd2:listOfReactants>
+                  <jd2:listOfProducts>
+                     <jd2:speciesReference species="bcat_nu" stoichiometry="1"/>
+                  </jd2:listOfProducts>
+                  <jd2:listOfModifierEdges/>
+                  <jd2:kineticLaw type="explicit">
+                     <jd2:rateEquation value="K_c_active_k*bcat_cm"/>
+                  </jd2:kineticLaw>
+                  <jd2:display arrowFillColor="FF000000" arrowStyle="ar1" lineColor="FF838464" lineThickness="2">
+                     <jd2:lineType type="ltLine">
+                        <jd2:edge>
+                           <jd2:pt speciesRef="bcat_cm" type="substrate" x="380" y="237"/>
+                           <jd2:pt speciesRef="bcat_nu" type="product" x="306" y="448"/>
+                        </jd2:edge>
+                     </jd2:lineType>
+                     <jd2:displayValue showValue="false" value="0" visible="false">
+                        <jd2:position rx="0" ry="0"/>
+                        <jd2:font fontColor="FF000000" fontName="Arial" fontSize="8" fontStyle=""/>
+                     </jd2:displayValue>
+                  </jd2:display>
+               </jd2:reaction>
+               <jd2:reaction id="K_n_active" reversible="false">
+                  <jd2:listOfReactants>
+                     <jd2:speciesReference species="bcat_nu" stoichiometry="1"/>
+                  </jd2:listOfReactants>
+                  <jd2:listOfProducts>
+                     <jd2:speciesReference species="bcat_cm" stoichiometry="1"/>
+                  </jd2:listOfProducts>
+                  <jd2:listOfModifierEdges/>
+                  <jd2:kineticLaw type="explicit">
+                     <jd2:rateEquation value="K_n_active_k*bcat_nu"/>
+                  </jd2:kineticLaw>
+                  <jd2:display arrowFillColor="FF000000" arrowStyle="ar1" lineColor="FF838464" lineThickness="2">
+                     <jd2:lineType type="ltBezier">
+                        <jd2:edge>
+                           <jd2:pt speciesRef="bcat_nu" type="substrate" x="306" y="448"/>
+                           <jd2:pt type="controlPoint" x="373" y="418"/>
+                           <jd2:pt type="controlPoint" x="390" y="346"/>
+                           <jd2:pt speciesRef="bcat_cm" type="product" x="380" y="237"/>
+                        </jd2:edge>
+                     </jd2:lineType>
+                     <jd2:displayValue showValue="false" value="0" visible="false">
+                        <jd2:position rx="0" ry="0"/>
+                        <jd2:font fontColor="FF000000" fontName="Arial" fontSize="8" fontStyle=""/>
+                     </jd2:displayValue>
+                  </jd2:display>
+               </jd2:reaction>
+            </jd2:listOfReactions>
+         </jd2:JDesignerLayout>
+                  </annotation>
+      <listOfUnitDefinitions>
+      <unitDefinition name="minutes" id="time">
+        <listOfUnits>
+          <unit kind="second" multiplier="60"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment size="1" id="compartment"/>
+      <compartment size="1.16" id="CytosolMembrane"/>
+      <compartment size="0.65" id="nucleus"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species compartment="CytosolMembrane" boundaryCondition="false" id="bcat_cm" initialConcentration="46.6"/>
+      <species compartment="CytosolMembrane" boundaryCondition="false" id="ligand_cm" initialConcentration="581.1"/>
+      <species compartment="CytosolMembrane" boundaryCondition="false" id="complex_cm" initialConcentration="418.9"/>
+      <species compartment="nucleus" boundaryCondition="false" id="bcat_nu" initialConcentration="32.6"/>
+      <species compartment="nucleus" boundaryCondition="false" id="ligand_nu" initialConcentration="516.8"/>
+      <species compartment="nucleus" boundaryCondition="false" id="complex_nu" initialConcentration="483.2"/>
+      <species compartment="CytosolMembrane" id="drag" name="drag" initialAmount="1" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter name="wnt_level" constant="false" id="wnt_level"/>
+      <parameter value="0.0163" id="kdegradation"/>
+      <parameter value="1.306" id="Bsyn"/>
+      <parameter value="17.16" id="K_n_active_k"/>
+      <parameter value="1E-5" id="kC_k1"/>
+      <parameter value="0.000647" id="kC_k2"/>
+      <parameter value="0.0001" id="kN_k1"/>
+      <parameter value="0.00349" id="kN_k2"/>
+      <parameter value="39.13" id="kdiffusion_k"/>
+      <parameter value="4.5" id="K_c_active_k"/>
+      <parameter name="gamma" constant="false" id="gamma"/>
+      <parameter id="ComplexTransitThreshold" name="ComplexTransitThreshold" value="1" constant="true"/>
+    </listOfParameters>
+    <listOfRules>
+      <assignmentRule variable="drag">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <ci> max </ci>
+            <apply>
+              <divide/>
+              <apply>
+                <minus/>
+                <ci> complex_cm </ci>
+                <cn type="integer"> 700 </cn>
+              </apply>
+              <cn type="integer"> 10 </cn>
+            </apply>
+            <cn type="integer"> 1 </cn>
+          </apply>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction id="Bsynthesis" reversible="false">
+        <listOfProducts>
+          <speciesReference species="bcat_cm" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">   
+          <apply>
+          <times/>      
+            <ci> Bsyn </ci>
+            <ci> CytosolMembrane </ci>
+         </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="kDegradation" reversible="false">
+        <listOfReactants>
+          <speciesReference species="bcat_cm" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <apply>
+                <times/>
+                <apply>
+                  <times/>
+                  <ci> CytosolMembrane </ci>
+                  <ci> kdegradation </ci>
+                  <ci> gamma </ci>
+                </apply>
+                <ci> bcat_cm </ci>
+              </apply>
+              <apply>
+                <minus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <times/>
+                  <cn> 0.5 </cn>
+                  <ci> wnt_level </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="kC" reversible="true">
+        <listOfReactants>
+          <speciesReference species="bcat_cm" stoichiometry="1"/>
+          <speciesReference species="ligand_cm" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_cm" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> CytosolMembrane </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <times/>
+                    <ci> kC_k1 </ci>
+                    <ci> bcat_cm </ci>
+                  </apply>
+                  <ci> ligand_cm </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kC_k2 </ci>
+                  <ci> complex_cm </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="kN" reversible="true">
+        <listOfReactants>
+          <speciesReference species="bcat_nu" stoichiometry="1"/>
+          <speciesReference species="ligand_nu" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_nu" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> nucleus </ci>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <times/>
+                    <ci> kN_k1 </ci>
+                    <ci> bcat_nu </ci>
+                  </apply>
+                  <ci> ligand_nu </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> kN_k2 </ci>
+                  <ci> complex_nu </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="kdiffusion" reversible="false">
+        <listOfReactants>
+          <speciesReference species="bcat_cm" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="bcat_nu" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> kdiffusion_k </ci>
+              <apply>
+                <minus/>
+                <ci> bcat_cm </ci>
+                <ci> bcat_nu </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="K_c_active" reversible="false">
+        <listOfReactants>
+          <speciesReference species="bcat_cm" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="bcat_nu" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> K_c_active_k </ci>
+              <ci> bcat_cm </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="K_n_active" reversible="false">
+        <listOfReactants>
+          <speciesReference species="bcat_nu" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="bcat_cm" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> K_n_active_k </ci>
+              <ci> bcat_nu </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

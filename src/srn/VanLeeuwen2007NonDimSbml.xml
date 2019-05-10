@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
+  <annotation>
+    <SimBiology xmlns="http://www.mathworks.com">
+      <Version Major="5" Minor="5" Point="0"/>
+    </SimBiology>
+  </annotation>
+  <model id="mw0664fb57_9856_4bf3_a551_560daa49df18" name="VanLeeuwen">
+    <listOfCompartments>
+      <compartment id="cytosolmembraneandnucleus" name="cytosolmembraneandnucleus" size="1" constant="true"/>
+    </listOfCompartments>
+    <listOfUnitDefinitions>
+      <unitDefinition name="hours" id="time">
+        <listOfUnits>
+          <unit kind="second" multiplier="3600"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfSpecies>
+      <species id="X" name="X" compartment="cytosolmembraneandnucleus" initialAmount="0.268" boundaryCondition="false" constant="false"/>
+      <species id="D" name="D" compartment="cytosolmembraneandnucleus" initialAmount="2.68" boundaryCondition="false" constant="false"/>
+      <species id="C_o" name="C_o" compartment="cytosolmembraneandnucleus" initialAmount="76.2" boundaryCondition="false" constant="false"/>
+      <species id="C_u" name="C_u" compartment="cytosolmembraneandnucleus" initialAmount="13.5" boundaryCondition="false" constant="false"/>
+      <species id="C_c" name="C_c" compartment="cytosolmembraneandnucleus" initialAmount="0" boundaryCondition="false" constant="false"/>
+      <species id="A" name="A" compartment="cytosolmembraneandnucleus" initialAmount="300" boundaryCondition="false" constant="false"/>
+      <species id="C_A" name="C_A" compartment="cytosolmembraneandnucleus" initialAmount="544.2" boundaryCondition="false" constant="false"/>
+      <species id="T" name="T" compartment="cytosolmembraneandnucleus" initialAmount="750" boundaryCondition="false" constant="false"/>
+      <species id="C_oT" name="C_oT" compartment="cytosolmembraneandnucleus" initialAmount="76.2" boundaryCondition="false" constant="false"/>
+      <species id="C_cT" name="C_cT" compartment="cytosolmembraneandnucleus" initialAmount="0" boundaryCondition="false" constant="false"/>
+      <species id="Y" name="Y" compartment="cytosolmembraneandnucleus" initialAmount="36" boundaryCondition="false" constant="false"/>
+      <species id="C_F" name="C_F" compartment="cytosolmembraneandnucleus" initialAmount="76.2" boundaryCondition="false" constant="false"/>
+      <species id="C_T" name="C_T" compartment="cytosolmembraneandnucleus" initialAmount="76.2" boundaryCondition="false" constant="false"/>
+      <species id="drag" name="drag" compartment="cytosolmembraneandnucleus" initialAmount="1" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter id="K_T" name="K_T" value="1500" constant="true"/>
+      <parameter id="K_C" name="K_C" value="6000" constant="true"/>
+      <parameter id="K_D" name="K_D" value="150" constant="true"/>
+      <parameter id="p_u" name="p_u" value="1" constant="true"/>
+      <parameter id="wnt_level" name="wnt_level" value="0" constant="true"/>
+      <parameter id="xi_D" name="xi_D" value="0.00666666666666667" constant="true"/>
+      <parameter id="xi_Dx" name="xi_Dx" value="0.00666666666666667" constant="true"/>
+      <parameter id="xi_X" name="xi_X" value="0.266666666666667" constant="true"/>
+      <parameter id="xi_C" name="xi_C" value="0" constant="true"/>
+      <parameter id="d_Dx" name="d_Dx" value="0.00666666666666667" constant="true"/>
+      <parameter id="d_X" name="d_X" value="0.133333333333333" constant="true"/>
+      <parameter id="d_D" name="d_D" value="0.00666666666666667" constant="true"/>
+      <parameter id="p_c" name="p_c" value="0" constant="true"/>
+      <parameter id="gamma1" name="gamma1" value="1" constant="true"/>
+      <parameter id="gamma2" name="gamma2" value="1" constant="true"/>
+      <parameter id="s_D" name="s_D" value="0.133333333333333" constant="true"/>
+      <parameter id="s_X" name="s_X" value="0.0533333333333333" constant="true"/>
+      <parameter id="d_u" name="d_u" value="0.0666666666666667" constant="true"/>
+      <parameter id="s_c" name="s_c" value="1" constant="true"/>
+      <parameter id="d_c" name="d_c" value="0.00133333333333333" constant="true"/>
+      <parameter id="s_CA" name="s_CA" value="0.0111111111111111" constant="true"/>
+      <parameter id="d_CA" name="d_CA" value="0.466666666666667" constant="true"/>
+      <parameter id="s_CT" name="s_CT" value="0.00133333333333333" constant="true"/>
+      <parameter id="d_CT" name="d_CT" value="1" constant="true"/>
+      <parameter id="s_A" name="s_A" value="0.8" constant="true"/>
+      <parameter id="d_A" name="d_A" value="0.00266666666666667" constant="true"/>
+      <parameter id="s_T" name="s_T" value="0.4" constant="true"/>
+      <parameter id="d_T" name="d_T" value="0.000533333333333333" constant="true"/>
+      <parameter id="s_Y" name="s_Y" value="1" constant="true"/>
+      <parameter id="d_Y" name="d_Y" value="0.00133333333333333" constant="true"/>
+      <parameter id="ComplexTransitThreshold" name="ComplexTransitThreshold" value="1" constant="true"/>
+    </listOfParameters>
+    <listOfRules>
+      <assignmentRule variable="C_F">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci> C_o </ci>
+            <ci> C_c </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="C_T">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci> C_oT </ci>
+            <ci> C_cT </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="drag">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <ci> max </ci>
+            <apply>
+              <divide/>
+              <apply>
+                <minus/>
+                <ci> C_A </ci>
+                <cn type="integer"> 2300 </cn>
+              </apply>
+              <cn type="integer"> 36 </cn>
+            </apply>
+            <cn type="integer"> 1 </cn>
+          </apply>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction id="mwcfbf7716_cc13_473c_979a_033c57a28857" name="r1" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="X" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="D" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s_D </ci>
+              <ci> gamma1 </ci>
+              <ci> X </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwab347951_a286_432d_b03b_254dcdba4a25" name="r2" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="D" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="X" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <apply>
+                <plus/>
+                <ci> d_Dx </ci>
+                <apply>
+                  <times/>
+                  <ci> wnt_level </ci>
+                  <ci> xi_Dx </ci>
+                </apply>
+              </apply>
+              <ci> D </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwc497befc_0edd_4b0d_8895_77dbfa05a4be" name="r22" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference species="X" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <ci> s_X </ci>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwfa0f5940_d4e9_44e1_8a0c_379d6fdf9d0f" name="r23" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="X" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <apply>
+                <plus/>
+                <ci> d_X </ci>
+                <apply>
+                  <times/>
+                  <ci> wnt_level </ci>
+                  <ci> xi_X </ci>
+                </apply>
+              </apply>
+              <ci> X </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwbe108cd1_a5d9_4d55_97c9_ac584df6a005" name="r7" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="C_o" stoichiometry="1"/>
+          <speciesReference species="D" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="C_u" stoichiometry="1"/>
+          <speciesReference species="D" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> p_u </ci>
+                <ci> gamma2 </ci>
+                <ci> C_o </ci>
+                <ci> D </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> C_o </ci>
+                <ci> C_c </ci>
+                <ci> K_D </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwad0ba91a_37fb_48f5_8392_6c043dfdd5dc" name="r16" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="C_c" stoichiometry="1"/>
+          <speciesReference species="D" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="C_u" stoichiometry="1"/>
+          <speciesReference species="D" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> p_u </ci>
+                <ci> gamma2 </ci>
+                <ci> C_c </ci>
+                <ci> D </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> C_c </ci>
+                <ci> C_o </ci>
+                <ci> K_D </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw1d3d836b_77bd_489b_9a37_acc874344652" name="r8" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="C_u" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> d_u </ci>
+              <ci> C_u </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw552840aa_6d3c_4188_850d_9a3caafcdaa5" name="r3" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference species="C_o" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <ci> s_c </ci>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw5a301d6f_ffa1_4362_98de_0919a68808bc" name="r4" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="C_o" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> d_c </ci>
+              <ci> C_o </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw4b073704_f41a_43d1_8ff8_af03f1cb6e1d" name="r17" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="C_c" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> d_c </ci>
+              <ci> C_c </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw1c7459d0_b5a9_4a89_8682_79fc8ca4ca6c" name="r9" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="C_o" stoichiometry="1"/>
+          <speciesReference species="A" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="C_A" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s_CA </ci>
+              <ci> C_o </ci>
+              <ci> A </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw51e5ed29_82db_47fa_9eed_ab52b7786dd5" name="r10" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="C_A" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="C_o" stoichiometry="1"/>
+          <speciesReference species="A" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> d_CA </ci>
+              <ci> C_A </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw8704b9b0_f93d_405a_89a1_e000c5b66896" name="r11" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="C_o" stoichiometry="1"/>
+          <speciesReference species="T" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="C_oT" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s_CT </ci>
+              <ci> C_o </ci>
+              <ci> T </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw322e8f78_68f6_4293_ae2a_ab238ec5cf9b" name="r18" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="C_c" stoichiometry="1"/>
+          <speciesReference species="T" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="C_cT" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> s_CT </ci>
+              <ci> C_c </ci>
+              <ci> T </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwf5440ce3_586c_491f_ba71_bbf1c485027f" name="r12" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="C_oT" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="C_o" stoichiometry="1"/>
+          <speciesReference species="T" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> d_CT </ci>
+              <ci> C_oT </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw08c332d6_1aaf_498f_8e1c_13f1b9da85bf" name="r19" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="C_cT" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="C_c" stoichiometry="1"/>
+          <speciesReference species="T" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> d_CT </ci>
+              <ci> C_cT </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw3ece1442_a0b3_47eb_a8bf_cb317a46165f" name="r15" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="C_o" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="C_c" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <apply>
+                  <plus/>
+                  <ci> p_c </ci>
+                  <apply>
+                    <times/>
+                    <ci> wnt_level </ci>
+                    <ci> xi_C </ci>
+                  </apply>
+                </apply>
+                <ci> C_o </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> C_o </ci>
+                <ci> K_C </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwfb6f8dfa_2e07_4249_a8fe_af33ca27471e" name="r5" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference species="A" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <ci> s_A </ci>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwaa4e7692_3290_45ab_8a38_b5ffd49ede87" name="r6" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="A" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> d_A </ci>
+              <ci> A </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw86ea3c28_4745_4a89_9cbd_0f23c603e01b" name="r20" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference species="T" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <ci> s_T </ci>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwee62535f_931d_41e9_ad53_2cad54b94778" name="r21" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="T" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> d_T </ci>
+              <ci> T </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw1b250e04_290a_4689_9fc5_5f0bf6711e02" name="r13" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="C_oT" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Y" stoichiometry="1"/>
+          <speciesReference species="C_oT" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> s_Y </ci>
+                <apply>
+                  <plus/>
+                  <ci> C_oT </ci>
+                  <ci> C_cT </ci>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> C_oT </ci>
+                <ci> C_cT </ci>
+                <ci> K_T </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw925599eb_19a0_4434_8be3_67c40721b71d" name="r14" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="Y" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> d_Y </ci>
+              <ci> Y </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw321b3e5e_f6ed_4345_9346_55ffb1ff2137" name="r24" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="D" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <apply>
+                <plus/>
+                <ci> d_D </ci>
+                <apply>
+                  <times/>
+                  <ci> wnt_level </ci>
+                  <ci> xi_D </ci>
+                </apply>
+              </apply>
+              <ci> D </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>
