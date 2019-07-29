@@ -43,9 +43,11 @@ void Tan2014BetaCateninModelTwoSbmlTemplateOdeSystem::EvaluateYDerivatives(doubl
     double degredation_multiplier = this->mParameters[1]; 
 
     /* Define compartments and their sizes */
+/*
     const double compartment = 1.0;
     const double CytosolMembrane = 1.16;
     const double nucleus = 0.65;
+*/
 
     /* Define constant parameters and their values */
  /*   
