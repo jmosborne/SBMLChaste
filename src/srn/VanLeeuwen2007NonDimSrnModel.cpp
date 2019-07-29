@@ -88,8 +88,8 @@ void VanLeeuwen2007NonDimOdeSystem::EvaluateYDerivatives(double time, const std:
     double C_oT = rY[8]; // C_oT
     double C_cT = rY[9]; // C_cT
     double Y = rY[10]; // Y
-    double C_F = rY[11]; // C_F
-    double C_T = rY[12]; // C_T
+    double C_F;// = rY[11]; // C_F
+    double C_T;// = rY[12]; // C_T
     double drag = rY[13]; // drag
 
     /* Define state parameters */
