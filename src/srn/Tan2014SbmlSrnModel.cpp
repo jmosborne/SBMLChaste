@@ -63,7 +63,9 @@ void Tan2014SbmlOdeSystem::EvaluateYDerivatives(double time, const std::vector<d
     /* Define state parameters */
     double wnt_level = this->mParameters[0]; // wnt_level
     double gamma = this->mParameters[1]; // gamma
+/*
     double ComplexTransitThreshold = this->mParameters[2]; // ComplexTransitThreshold
+*/
 
      /* Define algebraic rules. */
     ////////////////// MODIFIED ///////////////
