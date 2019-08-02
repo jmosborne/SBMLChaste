@@ -88,19 +88,19 @@ void VanLeeuwen2007OdeSystem::EvaluateYDerivatives(double time, const std::vecto
     double C_oT = rY[8]; // C_oT
     double C_cT = rY[9]; // C_cT
     double Y = rY[10]; // Y
-    double C_F = rY[11]; // C_F
-    double C_T = rY[12]; // C_T
+    //double C_F = rY[11]; // C_F
+    //double C_T = rY[12]; // C_T
     double drag = rY[13]; // drag
 
     /* Define state parameters */
     double wnt_level = this->mParameters[0]; // wnt_level
     double gamma1 = this->mParameters[1]; // gamma1
     double gamma2 = this->mParameters[2]; // gamma2
-    double ComplexTransitThreshold = this->mParameters[3]; // ComplexTransitThreshold
+    //double ComplexTransitThreshold = this->mParameters[3]; // ComplexTransitThreshold
 
      /* Define algebraic rules. */
-    C_F = C_o + C_c;
-    C_T = C_oT + C_cT;
+    //C_F = C_o + C_c;
+    //C_T = C_oT + C_cT;
     ////////////////// MODIFIED ///////////////
     //drag = fmax((C_A - 100) / 3, 1);
     drag = fmax((C_A - 98.84798) / 3.98617, 1);
