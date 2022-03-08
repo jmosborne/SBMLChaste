@@ -37,12 +37,25 @@ cd projects/SBMLChaste/test/
 sh run_crypt_sweeps.sh
 ```
 
-
-## Gnerating code from SBML
-
-TODO
-
 **NB**: the paper was developed with release version 2019_1. It will not work with with older versions.
 
 For further information on using Chaste, see the extensive guide material (https://chaste.cs.ox.ac.uk/trac/wiki/ChasteGuides).
 You may also wish to look at some of the basic user tutorials (https://chaste.cs.ox.ac.uk/trac/wiki/UserTutorials).
+
+## Gnerating code from SBML
+
+In irder tio generate Chaste SRN models from SBML files you use the translator.py app in the SBMLChaste Folder
+
+Specificaly you first install libsbml
+
+```
+pip install python-libsbml
+```
+
+Then to gnerate the hpp and cpp for the SRN modle use the srn generator
+
+```
+python generate_from_sbml.py xxx.sbml
+```
+
+where xxx.sbml is the sbml file you wish to use. The two examples from the paper are in the folder.
